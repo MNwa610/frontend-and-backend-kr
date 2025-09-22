@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Товары - Семестровая работа</title>
+    <title>Контакты - Семестровая работа</title>
 </head>
 <body>
     <div id="header">Хэдер</div>
@@ -17,44 +17,27 @@
         </ul>
     </div>
     <div id="content">
-        <h1>Каталог товаров</h1>
+        <h1>Контакты</h1>
         
-        <div class="product-card">
-            <img src="src/product1.jpg" alt="Товар 1" width="200" height="150">
-            <h3>Смартфон XYZ</h3>
-            <p>Цена: 25 000 руб.</p>
-        </div>
-        
-        <div class="product-card">
-            <img src="src/product2.jpg" alt="Товар 2" width="200" height="150">
-            <h3>Ноутбук ABC</h3>
-            <p>Цена: 65 000 руб.</p>
-        </div>
-        
-        <div class="product-card">
-            <img src="src/product3.jpg" alt="Товар 3" width="200" height="150">
-            <h3>Наушники Pro</h3>
-            <p>Цена: 8 500 руб.</p>
-        </div>
-        
-        <div class="product-card">
-            <img src="src/product4.jpg" alt="Товар 4" width="200" height="150">
-            <h3>Планшет Ultra</h3>
-            <p>Цена: 35 000 руб.</p>
-        </div>
-        
-        <div class="product-card">
-            <img src="src/product5.jpg" alt="Товар 5" width="200" height="150">
-            <h3>Часы Smart</h3>
-            <p>Цена: 12 000 руб.</p>
-        </div>
-        
-        <div class="product-card">
-            <img src="src/product6.jpg" alt="Товар 6" width="200" height="150">
-            <h3>Камера Action</h3>
-            <p>Цена: 18 000 руб.</p>
+        <div class="contact-info">
+            <h2>Адрес электронной почты:</h2>
+            <p>info@company.com</p>
+            
+            <h2>Адрес:</h2>
+            <p>г. Москва, ул. Примерная, д. 123, офис 45</p>
+            
+            <h2>Телефон:</h2>
+            <p>+7 (495) 123-45-67</p>
+            
+            <button onclick="callMe()">Позвоните мне</button>
         </div>
     </div>
     <div id="footer">Футер</div>
+
+    <script>
+        function callMe() {
+            alert("Спасибо! Мы свяжемся с вами в ближайшее время по номеру телефона.");
+        }
+    </script>
 </body>
 </html>
