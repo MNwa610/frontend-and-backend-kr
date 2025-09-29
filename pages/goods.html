@@ -8,8 +8,11 @@
 </head>
 <body>
     <div class="page-container">
-        <div class="header">Хэдер</div>
-        <div class="nav">
+        <header class="header">
+            <h1>X2App</h1>
+        </header>
+
+        <nav class="nav">
             <ul class="nav-list">
                 <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
                 <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
@@ -17,35 +20,41 @@
                 <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
                 <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
             </ul>
-        </div>
-        <div class="content">
+        </nav>
+
+        <main class="content">
             <h1 class="section-title">Каталог товаров</h1>
             
-            <div class="product-card">
-                <img src="../images/IMG_4502.jpeg" alt="Личный киллер" width="200" height="150">
-                <h3 class="experience-title">Личный киллер</h3>
-                <p>Цена: 1 000 000 руб./день</p>
+            <div class="products-grid">
+                <article class="product-card">
+                    <img class="product-image" src="../images/IMG_4502.jpeg" alt="Личный киллер">
+                    <h3 class="product-name">Личный киллер</h3>
+                    <p class="product-price">1 000 000 руб./день</p>
+                </article>
+                
+                <article class="product-card">
+                    <img class="product-image" src="../images/IMG_5006.JPG" alt="Звонок Джону Порку">
+                    <h3 class="product-name">Звонок Джону Порку</h3>
+                    <p class="product-price">1 000 руб.</p>
+                </article>
+                
+                <article class="product-card">
+                    <img class="product-image" src="../images/IMG_6888.jpeg" alt="Домашний кот">
+                    <h3 class="product-name">Домашний кот</h3>
+                    <p class="product-price">Бесценно</p>
+                </article>
+                
+                <article class="product-card">
+                    <img class="product-image" src="../images/IMG_0127.jpeg" alt="Ламборджини">
+                    <h3 class="product-name">Ламборджини</h3>
+                    <p class="product-price">5 руб.</p>
+                </article>
             </div>
-            
-            <div class="product-card">
-                <img src="../images/IMG_5006.JPG" alt="Звонок Джону Порку" width="200" height="150">
-                <h3 class="experience-title">Звонок Джону Порку</h3>
-                <p>Цена: 1 000 руб.</p>
-            </div>
-            
-            <div class="product-card">
-                <img src="../images/IMG_6888.jpeg" alt="Домашний кот" width="200" height="150">
-                <h3 class="experience-title">Домашний кот</h3>
-                <p>Цена: Бесценно</p>
-            </div>
-            
-            <div class="product-card">
-                <img src="../images/IMG_0127.jpeg" alt="Ламборджини" width="200" height="150">
-                <h3 class="experience-title">Ламборджини</h3>
-                <p>Цена: 5 руб.</p>
-            </div>
-        </div>
-        <div class="footer">Футер</div>
+        </main>
+
+        <footer class="footer">
+            <p>Футер</p>
+        </footer>
     </div>
 </body>
 </html>

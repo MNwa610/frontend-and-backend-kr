@@ -8,8 +8,11 @@
 </head>
 <body>
     <div class="page-container">
-        <div class="header">Хэдер</div>
-        <div class="nav">
+        <header class="header">
+            <h1>X2App</h1>
+        </header>
+
+        <nav class="nav">
             <ul class="nav-list">
                 <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
                 <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
@@ -17,30 +20,34 @@
                 <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
                 <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
             </ul>
-        </div>
-        <div class="content">
+        </nav>
+
+        <main class="content">
             <h1 class="section-title">Контакты</h1>
             
-            <div class="contact-info">
-                <div class="experience-card">
-                    <h2 class="experience-title">Адрес электронной почты:</h2>
+            <div class="contacts-container">
+                <div class="contact-info">
+                    <h2>Адрес электронной почты:</h2>
                     <p>ceplyaev1975@yandex.ru</p>
                 </div>
                 
-                <div class="experience-card">
-                    <h2 class="experience-title">Адрес:</h2>
+                <div class="contact-info">
+                    <h2>Адрес:</h2>
                     <p>г. Москва</p>
                 </div>
                 
-                <div class="experience-card">
-                    <h2 class="experience-title">Телефон:</h2>
+                <div class="contact-info">
+                    <h2>Телефон:</h2>
                     <p>+7 (910) 624-33-74</p>
                 </div>
                 
                 <button class="contact-button" onclick="callMe()">Позвоните мне</button>
             </div>
-        </div>
-        <div class="footer">Футер</div>
+        </main>
+
+        <footer class="footer">
+            <p>Футер</p>
+        </footer>
     </div>
 
     <script>
