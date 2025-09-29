@@ -211,8 +211,8 @@ main.content {
 }
 
 .product-image {
-    width: 150px;       /* было 200px */
-    height: 120px;      /* было 150px */
+    width: 400px;       /* было 200px */
+    height: 350px;      /* было 150px */
     border-radius: 10px;
     object-fit: cover;
     margin-bottom: 20px;
