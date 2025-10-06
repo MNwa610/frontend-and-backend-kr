@@ -3,58 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Товары - Семестровая работа</title>
-    <link rel="stylesheet" href="../style/styles.css">
+    <title>Товары - Портфолио</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
-<body>
-    <div class="page-container">
-        <header class="header">
-            <h1>Товары</h1>
+<body class="bg-light">
+    <div class="container-fluid p-0">
+        <!-- Header -->
+        <header class="bg-primary text-white py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h1 class="h3 mb-1">Мой Портфолио</h1>
+                        <p class="mb-0 opacity-75">Каталог товаров</p>
+                    </div>
+                    <div class="col-auto">
+                        <span class="badge bg-light text-primary">Товары</span>
+                    </div>
+                </div>
+            </div>
         </header>
 
-        <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
-            </ul>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">
+                                <i class="bi bi-house me-1"></i>Главная
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html">
+                                <i class="bi bi-newspaper me-1"></i>Новости
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="goods.html">
+                                <i class="bi bi-cart me-1"></i>Товары
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacts.html">
+                                <i class="bi bi-telephone me-1"></i>Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
 
-        <main class="content">
-            <h1 class="section-title">Каталог товаров</h1>
-            
-            <div class="products-grid">
-                <article class="product-card">
-                    <img class="product-image" src="../images/IMG_4502.jpeg" alt="Личный киллер">
-                    <h3 class="product-name">Личный киллер</h3>
-                    <p class="product-price">1 000 000 руб./день</p>
-                </article>
-                
-                <article class="product-card">
-                    <img class="product-image" src="../images/IMG_5006.JPG" alt="Звонок Джону Порку">
-                    <h3 class="product-name">Звонок Джону Порку</h3>
-                    <p class="product-price">1 000 руб.</p>
-                </article>
-                
-                <article class="product-card">
-                    <img class="product-image" src="../images/IMG_6888.jpeg" alt="Домашний кот">
-                    <h3 class="product-name">Домашний кот</h3>
-                    <p class="product-price">Бесценно</p>
-                </article>
-                
-                <article class="product-card">
-                    <img class="product-image" src="../images/IMG_0127.jpeg" alt="Ламборджини">
-                    <h3 class="product-name">Ламборджини</h3>
-                    <p class="product-price">5 руб.</p>
-                </article>
+        <!-- Main Content -->
+        <main class="container my-4">
+            <!-- Page Title -->
+            <div class="row mb-4">
+                <div class="col">
+                    <h2 class="text-primary">
+                        <i class="bi bi-cart3 me-2"></i>Каталог товаров
+                    </h2>
+                    <p class="text-muted">Лучшие предложения для вас</p>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="row g-4">
+                <!-- Product 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="../images/IMG_4502.jpeg" class="card-img-top" alt="Личный киллер" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Личный киллер</h5>
+                            <p class="card-text flex-grow-1">Профессиональные услуги личной охраны и безопасности</p>
+                            <div class="mt-auto">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="h5 text-primary mb-0">1 000 000 руб./день</span>
+                                </div>
+                                <button class="btn btn-primary w-100">
+                                    <i class="bi bi-cart-plus me-1"></i>В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="../images/IMG_5006.JPG" class="card-img-top" alt="Звонок Джону Порку" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Звонок Джону Порку</h5>
+                            <p class="card-text flex-grow-1">Эксклюзивный звонок известной личности</p>
+                            <div class="mt-auto">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="h5 text-success mb-0">1 000 руб.</span>
+                                </div>
+                                <button class="btn btn-success w-100">
+                                    <i class="bi bi-cart-plus me-1"></i>В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="../images/IMG_6888.jpeg" class="card-img-top" alt="Домашний кот" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Домашний кот</h5>
+                            <p class="card-text flex-grow-1">Пушистый друг для уюта и хорошего настроения</p>
+                            <div class="mt-auto">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="h5 text-warning mb-0">Бесценно</span>
+                                </div>
+                                <button class="btn btn-warning w-100">
+                                    <i class="bi bi-cart-plus me-1"></i>В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="../images/IMG_0127.jpeg" class="card-img-top" alt="Ламборджини" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Ламборджини</h5>
+                            <p class="card-text flex-grow-1">Роскошный спортивный автомобиль мечты</p>
+                            <div class="mt-auto">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="h5 text-danger mb-0">5 руб.</span>
+                                    <small class="text-muted text-decoration-line-through">15 000 000 руб.</small>
+                                </div>
+                                <button class="btn btn-danger w-100">
+                                    <i class="bi bi-cart-plus me-1"></i>В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card bg-light border-0">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-primary">
+                                <i class="bi bi-info-circle me-2"></i>О доставке
+                            </h5>
+                            <p class="card-text text-muted">
+                                Все товары доставляются в течение 24 часов. Гарантия качества и возврата средств.
+                            </p>
+                            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                                <span class="badge bg-primary">
+                                    <i class="bi bi-truck me-1"></i>Быстрая доставка
+                                </span>
+                                <span class="badge bg-success">
+                                    <i class="bi bi-shield-check me-1"></i>Гарантия
+                                </span>
+                                <span class="badge bg-info">
+                                    <i class="bi bi-arrow-left-right me-1"></i>Возврат
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
 
-        <footer class="footer">
-            <p>Футер</p>
+        <!-- Footer -->
+        <footer class="bg-dark text-white py-4 mt-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2024 Портфолио студента. Все права защищены.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="contacts.html" class="text-white text-decoration-none me-3">Контакты</a>
+                        <a href="#" class="text-white text-decoration-none">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
