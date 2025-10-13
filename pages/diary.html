@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты - Портфолио</title>
+    <title>Дневник - Портфолио</title>
     <link rel="icon" type="image/x-icon" href="../images/M.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../styles/styles.css">
+    
 </head>
 <body>
     <div class="container-fluid p-0">
@@ -17,7 +18,7 @@
                 <div class="row align-items-center">
                     <div class="col">
                         <h1 class="h3 mb-1">Цепляев Михаил</h1>
-                        <p class="mb-0 opacity-75">Контакты</p>
+                        <p class="mb-0 opacity-75">Учебный дневник</p>
                     </div>
                 </div>
             </div>
@@ -42,12 +43,12 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="diary.html">
+                            <a class="nav-link active" href="diary.html">
                                 <i class="bi bi-journal me-1"></i>Дневник
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="contacts.html">
+                            <a class="nav-link" href="contacts.html">
                                 <i class="bi bi-telephone me-1"></i>Контакты
                             </a>
                         </li>
@@ -59,58 +60,80 @@
         <!-- Main Content -->
         <main class="container my-5">
             <div class="row">
-                <!-- Contact Form -->
+                <!-- Left Column - Progress -->
                 <div class="col-lg-8">
                     <div class="card shadow-sm mb-4">
                         <div class="card-header bg-light">
                             <h3 class="card-title h4 mb-0">
-                                <i class="bi bi-chat-dots text-primary me-2"></i>
-                                Свяжитесь со мной
+                                <i class="bi bi-graph-up text-primary me-2"></i>
+                                Мой учебный прогресс
                             </h3>
                         </div>
                         <div class="card-body">
-                            <form id="contactForm">
-                                <div class="mb-3">
-                                    <label for="name" class="form-label">Имя</label>
-                                    <input type="text" class="form-control" id="name" required placeholder="Введите ваше имя">
+                            <div class="list-group list-group-flush">
+                                <div class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                        <span>15 дек - Верстка макета сайта</span>
+                                    </div>
+                                    <span class="badge bg-success">Завершено</span>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" required placeholder="example@mail.ru">
+                                <div class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                        <span>10 дек - JavaScript основы</span>
+                                    </div>
+                                    <span class="badge bg-success">Завершено</span>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="message" class="form-label">Сообщение</label>
-                                    <textarea class="form-control" id="message" rows="5" required placeholder="Введите ваше сообщение..."></textarea>
+                                <div class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <i class="bi bi-arrow-clockwise text-warning me-2"></i>
+                                        <span>05 дек - Работа с формами</span>
+                                    </div>
+                                    <span class="badge bg-warning">В процессе</span>
                                 </div>
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="bi bi-send me-1"></i>Отправить сообщение
-                                </button>
-                            </form>
+                                <div class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <i class="bi bi-arrow-clockwise text-warning me-2"></i>
+                                        <span>01 дек - Адаптивный дизайн</span>
+                                    </div>
+                                    <span class="badge bg-warning">В процессе</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary mt-3">
+                                <i class="bi bi-plus-circle me-1"></i>Добавить запись
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Contact Info -->
+                <!-- Right Column - Courses -->
                 <div class="col-lg-4">
                     <div class="card shadow-sm">
                         <div class="card-header bg-light">
                             <h3 class="card-title h4 mb-0">
-                                <i class="bi bi-info-circle text-primary me-2"></i>
-                                Контакты
+                                <i class="bi bi-book text-primary me-2"></i>
+                                Текущие курсы
                             </h3>
                         </div>
                         <div class="card-body">
                             <div class="mb-3">
-                                <i class="bi bi-envelope text-primary me-2"></i>
-                                <span>ceplyaev1975@yandex.ru</span>
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span>Веб-разработка</span>
+                                    <span class="text-primary">90%</span>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-primary" style="width: 90%"></div>
+                                </div>
                             </div>
                             <div class="mb-3">
-                                <i class="bi bi-github text-primary me-2"></i>
-                                <span>GitHub: MNwa610</span>
-                            </div>
-                            <div class="mb-3">
-                                <i class="bi bi-geo-alt text-primary me-2"></i>
-                                <span>г. Москва, Россия</span>
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span>JavaScript</span>
+                                    <span class="text-primary">70%</span>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-success" style="width: 70%"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -134,12 +157,5 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Сообщение отправлено! Спасибо за ваше обращение.');
-            this.reset();
-        });
-    </script>
 </body>
 </html>
