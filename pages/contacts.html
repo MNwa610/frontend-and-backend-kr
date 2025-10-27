@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
-    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+    <a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
     
     <div class="container-fluid p-0">
         <!-- Header -->
-        <header class="bg-primary text-white py-4">
+        <header class="bg-primary text-white py-4" role="banner">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col">
@@ -26,31 +26,32 @@
         </header>
 
         <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Основная навигация">
             <div class="container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-expanded="false" aria-controls="navbarNav" aria-label="Переключить навигацию">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="../index.html">
-                                <i class="bi bi-house me-1"></i>Главная
+                                <i class="bi bi-house me-1" aria-hidden="true"></i>Главная
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="projects.html">
-                                <i class="bi bi-folder me-1"></i>Проекты
+                                <i class="bi bi-folder me-1" aria-hidden="true"></i>Проекты
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="diary.html">
-                                <i class="bi bi-journal me-1"></i>Дневник
+                                <i class="bi bi-journal me-1" aria-hidden="true"></i>Дневник
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="contacts.html">
-                                <i class="bi bi-telephone me-1"></i>Контакты
+                            <a class="nav-link active" href="contacts.html" aria-current="page">
+                                <i class="bi bi-telephone me-1" aria-hidden="true"></i>Контакты
                             </a>
                         </li>
                     </ul>
@@ -59,69 +60,198 @@
         </nav>
 
         <!-- Main Content -->
-        <main id="main" class="container my-5">
+        <main id="main-content" class="container my-5">
+            <h1 class="visually-hidden">Контактная информация</h1>
+            
             <div class="row">
                 <!-- Contact Form -->
                 <div class="col-lg-8">
-                    <div class="card shadow-sm mb-4">
-                        <div class="card-header bg-light">
-                            <h3 class="card-title h4 mb-0">
-                                <i class="bi bi-chat-dots text-primary me-2"></i>
-                                Свяжитесь со мной
-                            </h3>
+                    <section aria-labelledby="contact-form-title">
+                        <div class="card shadow-sm mb-4">
+                            <div class="card-header bg-light">
+                                <h2 id="contact-form-title" class="card-title h4 mb-0">
+                                    <i class="bi bi-chat-dots text-primary me-2" aria-hidden="true"></i>
+                                    Свяжитесь со мной
+                                </h2>
+                            </div>
+                            <div class="card-body">
+                                <form id="contactForm" class="accessible-form" novalidate>
+                                    <fieldset>
+                                        <legend class="visually-hidden">Контактная информация</legend>
+                                        
+                                        <div class="mb-3">
+                                            <label for="name" class="form-label">
+                                                Имя <span class="text-danger" aria-hidden="true">*</span>
+                                                <span class="visually-hidden">обязательное поле</span>
+                                            </label>
+                                            <input type="text" class="form-control" id="name" name="name" 
+                                                   required aria-required="true"
+                                                   aria-describedby="name-help"
+                                                   placeholder="Введите ваше имя">
+                                            <div id="name-help" class="form-text visually-hidden">
+                                                Пожалуйста, введите ваше полное имя
+                                            </div>
+                                            <div id="name-error" class="invalid-feedback" role="alert" aria-live="polite"></div>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">
+                                                Email <span class="text-danger" aria-hidden="true">*</span>
+                                                <span class="visually-hidden">обязательное поле</span>
+                                            </label>
+                                            <input type="email" class="form-control" id="email" name="email" 
+                                                   required aria-required="true"
+                                                   aria-describedby="email-help"
+                                                   placeholder="example@mail.ru">
+                                            <div id="email-help" class="form-text visually-hidden">
+                                                Пожалуйста, введите действующий email адрес
+                                            </div>
+                                            <div id="email-error" class="invalid-feedback" role="alert" aria-live="polite"></div>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="phone" class="form-label">Телефон</label>
+                                            <input type="tel" class="form-control" id="phone" name="phone" 
+                                                   aria-describedby="phone-help"
+                                                   placeholder="+7 (999) 999-99-99">
+                                            <div id="phone-help" class="form-text">
+                                                Необязательное поле
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="subject" class="form-label">Тема сообщения</label>
+                                            <select class="form-control" id="subject" name="subject" 
+                                                    aria-describedby="subject-help">
+                                                <option value="">Выберите тему</option>
+                                                <option value="work">Сотрудничество</option>
+                                                <option value="project">Проект</option>
+                                                <option value="question">Вопрос</option>
+                                                <option value="other">Другое</option>
+                                            </select>
+                                            <div id="subject-help" class="form-text">
+                                                Выберите наиболее подходящую тему для вашего сообщения
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="message" class="form-label">
+                                                Сообщение <span class="text-danger" aria-hidden="true">*</span>
+                                                <span class="visually-hidden">обязательное поле</span>
+                                            </label>
+                                            <textarea class="form-control" id="message" name="message" rows="5" 
+                                                      required aria-required="true"
+                                                      aria-describedby="message-help"
+                                                      placeholder="Введите ваше сообщение..."></textarea>
+                                            <div id="message-help" class="form-text visually-hidden">
+                                                Пожалуйста, подробно опишите цель вашего обращения
+                                            </div>
+                                            <div id="message-error" class="invalid-feedback" role="alert" aria-live="polite"></div>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="newsletter" name="newsletter"
+                                                       aria-describedby="newsletter-help">
+                                                <label class="form-check-label" for="newsletter">
+                                                    Подписаться на рассылку
+                                                </label>
+                                                <div id="newsletter-help" class="form-text">
+                                                    Получать уведомления о новых проектах и статьях
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <button type="submit" class="btn btn-primary" id="submit-btn">
+                                            <i class="bi bi-send me-1" aria-hidden="true"></i>
+                                            Отправить сообщение
+                                        </button>
+                                    </fieldset>
+                                </form>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <form id="contactForm">
-                                <div class="mb-3">
-                                    <label for="name" class="form-label">Имя</label>
-                                    <input type="text" class="form-control" id="name" required placeholder="Введите ваше имя">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" required placeholder="example@mail.ru">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="message" class="form-label">Сообщение</label>
-                                    <textarea class="form-control" id="message" rows="5" required placeholder="Введите ваше сообщение..."></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="bi bi-send me-1"></i>Отправить сообщение
-                                </button>
-                            </form>
-                        </div>
-                    </div>
+                    </section>
                 </div>
 
                 <!-- Contact Info -->
                 <div class="col-lg-4">
-                    <div class="card shadow-sm">
-                        <div class="card-header bg-light">
-                            <h3 class="card-title h4 mb-0">
-                                <i class="bi bi-info-circle text-primary me-2"></i>
-                                Контакты
-                            </h3>
+                    <section aria-labelledby="contact-info-title">
+                        <div class="card shadow-sm mb-4">
+                            <div class="card-header bg-light">
+                                <h2 id="contact-info-title" class="card-title h4 mb-0">
+                                    <i class="bi bi-info-circle text-primary me-2" aria-hidden="true"></i>
+                                    Контактная информация
+                                </h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="contact-info" role="list">
+                                    <div class="mb-3" role="listitem">
+                                        <i class="bi bi-envelope text-primary me-2" aria-hidden="true"></i>
+                                        <a href="mailto:ceplyaev1975@yandex.ru" class="text-decoration-none">ceplyaev1975@yandex.ru</a>
+                                    </div>
+                                    <div class="mb-3" role="listitem">
+                                        <i class="bi bi-github text-primary me-2" aria-hidden="true"></i>
+                                        <span>GitHub: MNwa610</span>
+                                    </div>
+                                    <div class="mb-3" role="listitem">
+                                        <i class="bi bi-geo-alt text-primary me-2" aria-hidden="true"></i>
+                                        <span>г. Москва, Россия</span>
+                                    </div>
+                                    <div class="mb-3" role="listitem">
+                                        <i class="bi bi-telephone text-primary me-2" aria-hidden="true"></i>
+                                        <span>+7 (999) 123-45-67</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <div class="mb-3">
-                                <i class="bi bi-envelope text-primary me-2"></i>
-                                <span>ceplyaev1975@yandex.ru</span>
+                    </section>
+
+                    <!-- Availability Table -->
+                    <section aria-labelledby="availability-title">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-light">
+                                <h2 id="availability-title" class="card-title h4 mb-0">
+                                    <i class="bi bi-clock text-primary me-2" aria-hidden="true"></i>
+                                    Доступность
+                                </h2>
                             </div>
-                            <div class="mb-3">
-                                <i class="bi bi-github text-primary me-2"></i>
-                                <span>GitHub: MNwa610</span>
-                            </div>
-                            <div class="mb-3">
-                                <i class="bi bi-geo-alt text-primary me-2"></i>
-                                <span>г. Москва, Россия</span>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-sm" aria-describedby="availability-description">
+                                        <caption id="availability-description" class="visually-hidden">
+                                            Расписание доступности для связи
+                                        </caption>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">День</th>
+                                                <th scope="col">Время</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Пн-Пт</th>
+                                                <td>9:00 - 18:00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Сб</th>
+                                                <td>10:00 - 16:00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Вс</th>
+                                                <td>Выходной</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
                 </div>
             </div>
         </main>
 
         <!-- Footer -->
-        <footer class="bg-dark text-white py-4">
+        <footer class="bg-dark text-white py-4" role="contentinfo">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-6">
@@ -137,10 +267,105 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Сообщение отправлено! Спасибо за ваше обращение.');
-            this.reset();
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submit-btn');
+            
+
+            const focusableElements = form.querySelectorAll('input, select, textarea, button');
+            focusableElements.forEach(el => {
+                el.addEventListener('focus', function() {
+                    this.classList.add('focused');
+                });
+                el.addEventListener('blur', function() {
+                    this.classList.remove('focused');
+                });
+            });
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                let isValid = true;
+                const requiredFields = form.querySelectorAll('[required]');
+                
+                // Clear previous errors
+                form.querySelectorAll('.is-invalid').forEach(field => {
+                    field.classList.remove('is-invalid');
+                });
+                form.querySelectorAll('.invalid-feedback').forEach(feedback => {
+                    feedback.textContent = '';
+                });
+   
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        isValid = false;
+                        field.classList.add('is-invalid');
+                        const errorElement = document.getElementById(field.id + '-error');
+                        if (errorElement) {
+                            errorElement.textContent = 'Это поле обязательно для заполнения';
+                            errorElement.setAttribute('aria-live', 'assertive');
+                        }
+                        field.setAttribute('aria-invalid', 'true');
+                    } else {
+                        field.setAttribute('aria-invalid', 'false');
+                    }
+                });
+
+                const emailField = document.getElementById('email');
+                if (emailField.value && !isValidEmail(emailField.value)) {
+                    isValid = false;
+                    emailField.classList.add('is-invalid');
+                    const errorElement = document.getElementById('email-error');
+                    if (errorElement) {
+                        errorElement.textContent = 'Пожалуйста, введите корректный email адрес';
+                    }
+                    emailField.setAttribute('aria-invalid', 'true');
+                }
+                
+                if (isValid) {
+                    const originalText = submitBtn.innerHTML;
+                    submitBtn.innerHTML = '<i class="bi bi-check me-1" aria-hidden="true"></i>Отправлено!';
+                    submitBtn.disabled = true;
+
+                    const liveRegion = document.createElement('div');
+                    liveRegion.setAttribute('aria-live', 'polite');
+                    liveRegion.setAttribute('aria-atomic', 'true');
+                    liveRegion.className = 'visually-hidden';
+                    liveRegion.textContent = 'Сообщение успешно отправлено. Спасибо за ваше обращение!';
+                    document.body.appendChild(liveRegion);
+                    
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                        form.reset();
+                        document.body.removeChild(liveRegion);
+                    }, 3000);
+                } else {
+ 
+                    const firstInvalid = form.querySelector('.is-invalid');
+                    if (firstInvalid) {
+                        firstInvalid.focus();
+                    }
+                }
+            });
+            
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+            
+
+            document.addEventListener('keydown', function(e) {
+
+                if (e.key === 'Escape') {
+                    const openModal = document.querySelector('.modal.show');
+                    if (openModal) {
+                        const closeBtn = openModal.querySelector('[data-bs-dismiss="modal"]');
+                        if (closeBtn) closeBtn.click();
+                    }
+                }
+            });
         });
     </script>
 </body>
